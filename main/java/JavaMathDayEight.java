@@ -1,6 +1,8 @@
 import java.time.LocalDate;
 import java.util.Scanner;
 
+import static java.lang.Math.sqrt;
+
 public class JavaMathDayEight {
 //    1. Enter two numbers and do the following arithmetic Operations find max and min.
 //i) a+b*c ii) c+a/b
@@ -77,6 +79,24 @@ class SpringSeason{
 
 class Quadratic{
     public static void main(String[] args) {
+        int a, b, x, delta;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a " );
+        a = sc.nextInt();
+        System.out.println("Enter b " );
+        b = sc.nextInt();
+        System.out.println("Enter delta " );
+        delta = sc.nextInt();
+
+
+        double eq1;
+        double eq2;
+
+        eq1 = (-b + sqrt(delta))/(2*a);
+        eq2 = (-b - sqrt(delta))/(2*a);
+
+        System.out.println("Root one is : "+ eq1);
+        System.out.println("Root two is : "+ eq2);
 
     }
 }
@@ -101,7 +121,7 @@ class Quadratic{
          x2=sc.nextInt();
          System.out.println("enter y2 point");
          y2=sc.nextInt();
-         dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+         dis= sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
          System.out.println("distance between"+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+dis);
 
      }
