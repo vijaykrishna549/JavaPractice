@@ -11,6 +11,8 @@ public class Day11Part2 {
         perfectNumber.perfectNumber();
         Day11Part2 primeNumber = new Day11Part2();
         primeNumber.primeNumber();
+        Day11Part2 reverseNumber = new Day11Part2();
+        reverseNumber.reverseNumber();
 
         }
 //1. Fibonacci Series
@@ -58,7 +60,7 @@ public class Day11Part2 {
             System.out.println(number+" is Perfect Number");
         else System.out.println(number+" is not Perfect Number");
     }
-    
+
 //3. Prime Number
 //Just like the Perfect number, the Prime number is also a special type of number.
 // When the number is divided greater than 1 and divided by 1 or itself is referred to as the Prime number.
@@ -66,7 +68,7 @@ public class Day11Part2 {
 // so 2 is the only even prime minister.
     public void primeNumber(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Integer to check perfect number");
+        System.out.println("Enter the Integer to check prime number");
         int number = sc.nextInt();
         boolean flag = false;
         int i=2;
@@ -83,5 +85,33 @@ public class Day11Part2 {
         else {
             System.out.println(number+ " is not a prime number");
         }
+    }
+
+//    4. Reverse a number
+//In Java, we can reverse a number either by using for loop, while loop, or using recursion. The simplest way to reverse a number is by using for loop or while loop. In order to reverse a number, we have to follow the following steps:
+//a. We need to calculate the remainder of the number using the modulo
+//b. After that, we need to multiply the variable reverse by 10 and add the remainder into it.
+//c. We then divide the number by 10 and repeat steps until the number becomes 0.
+
+    public void reverseNumber(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Number to reverse");
+        int number = sc.nextInt();
+        int reversed = 0;
+
+        System.out.println("Original Number: " + number);
+
+        // run loop until num becomes 0
+        while(number != 0) {
+
+            // get last digit from num
+            int digit = number % 10;
+            reversed = reversed * 10 + digit;
+
+            // remove the last digit from num
+            number /= 10;
+        }
+
+        System.out.println("Reversed Number: " + reversed);
     }
 }
