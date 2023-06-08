@@ -103,15 +103,15 @@ public class Day11Part2 {
 
         // run loop until num becomes 0
         while(number != 0) {
-
             // get last digit from num
             int digit = number % 10;
             reversed = reversed * 10 + digit;
-
             // remove the last digit from num
             number /= 10;
         }
 
         System.out.println("Reversed Number: " + reversed);
     }
+
+
 }
