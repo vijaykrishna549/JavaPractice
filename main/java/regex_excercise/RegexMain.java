@@ -57,5 +57,20 @@ public class RegexMain {
             System.out.println("Regex for password is : "+ isPasswordRegexCorrect);
         }
         System.out.println();
+
+//        Sample Emails to Test
+        System.out.println("EMAIL SAMPLES FOR REGEX VALIDATION ");
+        System.out.println();
+        System.out.println(Pattern.matches("^[a-z0-9]{3,6}[.@+-][0-9a-z]{1,}[.,@][a-z]{0,8}[.]*[,.]*[a-z]{2,3}[.,]*[a-z]*[a-z]*$", "abc@yahoo.com"));
+        System.out.println(Pattern.matches("^[a-z0-9]{3,6}[.@+-][0-9a-z]{1,}[.,@][a-z]{0,8}[.]*[,.]*[a-z]{2,3}[.,]*[a-z]*[a-z]*$", "abc-100@yahoo.com,"));
+        System.out.println(Pattern.matches("^[a-z0-9]{3,6}[.@+-][0-9a-z]{1,}[.,@][a-z]{0,8}[.]*[,.]*[a-z]{2,3}[.,]*[a-z]*[a-z]*$", "abc.100@yahoo.com"));
+        System.out.println(Pattern.matches("^[a-z0-9]{3,6}[.@+-][0-9a-z]{1,}[.,@][a-z]{0,8}[.]*[,.]*[a-z]{2,3}[.,]*[a-z]*[a-z]*$", "abc111@abc,com"));
+        System.out.println(Pattern.matches("^[a-z0-9]{3,6}[.@+-][0-9a-z]{1,}[.,@][a-z]{0,8}[.]*[,.]*[a-z]{2,3}[.,]*[a-z]*[a-z]*$", "abc-100@abc.com.au"));
+        System.out.println(Pattern.matches("^[a-z0-9]{3,6}[.@+-][0-9a-z]{1,}[.,@][a-z]{0,8}[.]*[,.]*[a-z]{2,3}[.,]*[a-z]*[a-z]*$", "abc-100@abc.net"));
+        System.out.println(Pattern.matches("^[a-z0-9]{3,6}[.@+-][0-9a-z]{1,}[.,@][a-z]{0,8}[.]*[,.]*[a-z]{2,3}[.,]*[a-z]*[a-z]*$", "abc@1.com"));
+        System.out.println(Pattern.matches("^[a-z0-9]{3,6}[.@+-][0-9a-z]{1,}[.,@][a-z]{0,8}[.]*[,.]*[a-z]{2,3}[.,]*[a-z]*[a-z]*$", "abc@gmail.com.com"));
+        System.out.println(Pattern.matches("^[a-z0-9]{3,6}[.@+-][0-9a-z]{1,}[.,@][a-z]{0,8}[.]*[,.]*[a-z]{2,3}[.,]*[a-z]*[a-z]*$", "abc+100@gmail.com"));
     }
+
+
 }
