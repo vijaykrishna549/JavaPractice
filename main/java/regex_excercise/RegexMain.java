@@ -39,7 +39,7 @@ public class RegexMain {
         System.out.println();
 
 //UC 4 -> As a User need to follow pre -defined Mobile Format - E.g. 91 9919819801 - Country code follow by space and 10 digit number
-        boolean isMobileNumberRegexCorrect = Pattern.matches("^([1-9]{2}[- ]?[1-9]{1}[0-9]{9})$","91 9834671094");
+        boolean isMobileNumberRegexCorrect = Pattern.matches("^|91[ ][6789]{1}[0-9]{9}","91 8834671094");
         if(isMobileNumberRegexCorrect){
             System.out.println("Regex for mobile is : "+ isMobileNumberRegexCorrect);
         }
